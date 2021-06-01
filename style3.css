@@ -1,6 +1,6 @@
 /* Body */
 body{
-    background-color:aliceblue; 
+    background-color:rgb(193, 207, 219); 
 }
 /* Navbar */
 .navbar{
@@ -59,7 +59,7 @@ body{
     margin-left: 30px; 
     padding: inherit; 
     font-weight: bold; 
-    background-color: #0BADA6;
+    background-color: #0bad21;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .navbar{
