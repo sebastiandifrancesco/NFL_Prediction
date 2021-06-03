@@ -9,18 +9,19 @@
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
+    
+    <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-
-    <!-- Optional theme -->
+    
+    <!--Optional theme--> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
+    <!--Latest compiled and minified JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style3.css">
+    
 
     <body>
         <div class="container">
@@ -32,42 +33,42 @@
             </div>
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
-                    <form method="POST" action="/send" role="form", name="petform">
+                    <form method="POST" action="/send" role="form", name="nflform">
                         <div class="form-group">
-                            <label for="inputName">Did the home win the last game?</label>
-                            <input type="text" class="form-control" id="inputName" name="petName" placeholder="Enter Yes/No">
+                            <label for="homelast">Did the home win their last game?</label>
+                            <input type="text" class="form-control" id="homelast" name="homelast" placeholder="Enter 0 if team's first game, True/False if not">
                         </div>
                         <div class="form-group">
-                            <label for="inputLat">Did away team win the last game?</label>
-                            <input type="text" class="form-control" id="inputLat" name="petLat" placeholder="Enter Yes/No">
+                            <label for="awaylast">Did away team win their last game?</label>
+                            <input type="text" class="form-control" id="awaylast" name="awaylast" placeholder="Enter 0 if team's first game, True/False if not">
                         </div>
                         
                         <div class="form-group">
-                            <label for="inputLon">Did the home team win against away team last time they played?</label>
-                            <input type="text" class="form-control" id="inputLon" name="petLon" placeholder="Enter Yes/No">
+                            <label for="teamwin">Did the home team win against away team last time they played?</label>
+                            <input type="text" class="form-control" id="teamwin" name="teamwin" placeholder="0 for No, 1 for Yes">
                         </div>
                         <div class="form-group">
-                            <label for="inputLon">What is the home team winning streak?</label>
-                            <input type="text" class="form-control" id="inputLon" name="petLon" placeholder="Enter your number">
+                            <label for="inputhomewin">What is the home team winning streak?</label>
+                            <input type="text" class="form-control" id="inputhomewin" name="homewin" placeholder="Enter whole number">
                         </div>
                         <div class="form-group">
-                            <label for="inputLon">What is the away team winning streak?</label>
-                            <input type="text" class="form-control" id="inputLon" name="petLon" placeholder="Enter your number">
+                            <label for="inputawaywin">What is the away team winning streak?</label>
+                            <input type="text" class="form-control" id="inputawaywin" name="awaywin" placeholder="Enter whole number">
                         </div>
                         <div class="form-group">
-                            <label for="inputLon">Which team is the home team?</label>
-                            <input type="text" class="form-control" id="inputLon" name="petLon" placeholder="Enter your team">
+                            <label for="inputhome">Which team is the home team?</label>
+                            <input type="text" class="form-control" id="inputhome" name="hometeam" placeholder="Enter team name">
                         </div>
                         <div class="form-group">
-                            <label for="inputLon">Which team is the away team?</label>
-                            <input type="text" class="form-control" id="inputLon" name="petLon" placeholder="Enter your team">
+                            <label for="inputaway">Which team is the away team?</label>
+                            <input type="text" class="form-control" id="inputaway" name="awayteam" placeholder="Enter team name">
                         </div>
-                        <input type="submit" value="submit" class="btn btn-default">
+                        <input type="submit" value="Give Me My Prediction!" class="btn btn-default">
                     </form>
                 </div>
-                <br>
+                
             </div>
-
+            <br>
             <div class="bcontainer">    
                 <br>
                 <h1 id="bcontainerheader">About This Project</h1>
