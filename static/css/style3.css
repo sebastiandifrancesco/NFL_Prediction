@@ -52,7 +52,7 @@ body{
     border:black;
     border-style: solid;
     height:100%;
-    width:auto;
+    width:100px;
     float: right;
 }
 .row{
