@@ -225,22 +225,22 @@ def build_RF():
     # print(X_all)
 
 # Create user input from front end
-HT = ['New England Patriots']
-AT = ['Kansas City Chiefs']
-HLW = [0]
-VLW = [0]
-HWS = [0]
-VWS = [0]
-HTWL = [0]
+# HT = ['New England Patriots']
+# AT = ['Kansas City Chiefs']
+# HLW = [0]
+# VLW = [0]
+# HWS = [0]
+# VWS = [0]
+# HTWL = [0]
 def user_input(HT, AT, HLW, VLW, HWS, VWS, HTWL):
     user_input.NFL_model_ui = read_clean.NFL_2000_2016[["Home Team","Away Team","HomeLastWin","VisitorLastWin","HomeWinStreak","VisitorWinStreak","HomeTeamWonLast"]]
     user_input.user_input = pd.DataFrame({'Home Team':HT,'Away Team':AT,'HomeLastWin':HLW,'VisitorLastWin':VLW,'HomeWinStreak':HWS,'VisitorWinStreak':VWS,'HomeTeamWonLast':HTWL})
     user_input.NFL_model_ui = pd.concat([user_input.NFL_model_ui,user_input.user_input], axis = 0)
     user_input.NFL_model_ui = pd.get_dummies(user_input.NFL_model_ui)
     user_input.NFL_model_ui = pd.DataFrame(user_input.NFL_model_ui.iloc[-1]).T
-
+    print(user_input.user_input)
 # Test Prediction
-def predict():
+def predict(AT, HT):
     from sklearn.model_selection import train_test_split
     from sklearn.ensemble import RandomForestClassifier
     seed = 1
@@ -251,8 +251,10 @@ def predict():
     predicted = model.predict(user_input.NFL_model_ui)
     if predicted == [False]:
         print(f'{AT} will win.')
+        return f'{AT} will win.'
     else:
         print(f'{HT} will win.')
+        return f'{HT} will win.'
 
 def build_model():
     read_clean()
@@ -266,12 +268,12 @@ def build_model():
     create_X_all()
     build_RF()
 
-def predict_user_input():
+def predict_user_input(HT, AT, HLW, VLW, HWS, VWS, HTWL):
     # try:
     user_input(HT, AT, HLW, VLW, HWS, VWS, HTWL)
-    predict()
+    return predict(AT, HT)
     # except:
     #     print('There was a problem making a prediction. Please make sure you filled out the form correctly and try again.')
 
-build_model()
-predict_user_input()
+# build_model()
+# predict_user_input(HT, AT, HLW, VLW, HWS, VWS, HTWL)

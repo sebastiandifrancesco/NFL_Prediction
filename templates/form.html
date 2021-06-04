@@ -10,7 +10,7 @@
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../static/css/style3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     
@@ -25,7 +25,7 @@
 
     <body>
         <div class="container">
-            <div class="jumbotron text-center" style="background-image:url(Images/football_generic.jpg)" >
+            <div class="jumbotron text-center" style="background-image:url(../Images/football_generic.jpg)" >
                 <h1 class="h1">Welcome to the Football Prediction Center</h1>
                         <h2 class="h2">Fill out the form to generate a prediction for your favorite team!</h2>
                         <hr>
@@ -33,7 +33,7 @@
             </div>
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
-                    <form method="POST" action="/send" role="form", name="nflform">
+                    <form method="POST" action="/" role="form", name="nflform">
                         <div class="form-group">
                             <label for="homelast">Did the home win their last game?</label>
                             <input type="text" class="form-control" id="homelast" name="homelast" placeholder="Enter 0 if team's first game, True/False if not">
@@ -68,6 +68,9 @@
                 </div>
                 
             </div>
+            <div class="row">
+                {{results}}
+            </div>    
             <br>
             <div class="bcontainer">    
                 <br>
