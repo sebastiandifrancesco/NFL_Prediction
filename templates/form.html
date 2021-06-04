@@ -25,11 +25,15 @@
 
     <body>
         <div class="tcontainer">
-            <img class=bannerimgl src="../Images/football_generic.jpg">
-            <h1 class="h1">Welcome to the Football Prediction Center</h1>
-            <h2 class="h2">Fill out the form to generate a prediction for your favorite team!</h2>
+            <img class="bannerimgl" src="../Images/football_generic.jpg">
+            <div class ="tbanner">
+            <h1>Welcome to the Football Prediction Center</h1>
+            <h2>Fill out the form to generate a prediction for the big game!</h2>
+            
+            </div>
+            <!--<img class="bannerimgr" src="../Images/football_generic.jpg">-->
             <hr>
-            <img class=bannerimgr src="../Images/football_generic.jpg">
+            
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <form method="POST" action="/" role="form", name="nflform">
@@ -65,8 +69,12 @@
                         <input type="submit" value="Give Me My Prediction!" class="btn btn-default">
                     </form>
                 </div>
-                
+                <aside class="advertr">Your Ad Here!<br><br><br><br>Contact Team Eliens To Advertise On Sports Betting's Hottest Website!
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </aside>    
             </div>
+            
+        
             <div class="row">
                 {{results}}
             </div>    
@@ -81,7 +89,7 @@
                 &copy; Copyright and presented by Team Elien: Kim H, Eddie B, Sebastian D, Daniel E  </p>
             </div> 
         </div>
-
+    </div>
     </body>
 
 </html>
